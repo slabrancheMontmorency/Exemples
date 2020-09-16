@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36C00D50-0840-4EC6-B2A7-18F945984964}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Semaine2</RootNamespace>
-    <AssemblyName>Semaine2</AssemblyName>
+    <ProjectGuid>{D57FBD23-2BE6-48DE-8518-53A9331D46B6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Semaine4_2</RootNamespace>
+    <AssemblyName>Semaine4_2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

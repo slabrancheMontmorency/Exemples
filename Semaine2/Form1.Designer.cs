@@ -34,6 +34,7 @@
             this.textBoxUsager = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             this.buttonEffacer.Location = new System.Drawing.Point(384, 286);
             this.buttonEffacer.Name = "buttonEffacer";
             this.buttonEffacer.Size = new System.Drawing.Size(307, 83);
-            this.buttonEffacer.TabIndex = 12;
+            this.buttonEffacer.TabIndex = 1;
             this.buttonEffacer.Text = "Effacer";
             this.buttonEffacer.UseVisualStyleBackColor = true;
             this.buttonEffacer.Click += new System.EventHandler(this.buttonEffacer_Click);
@@ -77,7 +78,7 @@
             this.textBoxUsager.Location = new System.Drawing.Point(274, 108);
             this.textBoxUsager.Name = "textBoxUsager";
             this.textBoxUsager.Size = new System.Drawing.Size(754, 34);
-            this.textBoxUsager.TabIndex = 1;
+            this.textBoxUsager.TabIndex = 3;
             this.textBoxUsager.TextChanged += new System.EventHandler(this.textBoxUsager_TextChanged);
             // 
             // label1
@@ -95,21 +96,31 @@
             this.numericUpDown1.Location = new System.Drawing.Point(474, 194);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 15;
+            this.numericUpDown1.TabIndex = 2;
             // 
-            // FormSemaine2
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(274, 154);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(754, 34);
+            this.textBox1.TabIndex = 15;
+            // 
+            // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1089, 407);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxUsager);
             this.Controls.Add(this.buttonAfficher);
             this.Controls.Add(this.buttonEffacer);
             this.Controls.Add(this.buttonFermer);
-            this.Name = "FormSemaine2";
+            this.Name = "Form1";
             this.Text = "Exemple de la semaine 2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.FormSemaine2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
@@ -125,6 +136,7 @@
         private System.Windows.Forms.TextBox textBoxUsager;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

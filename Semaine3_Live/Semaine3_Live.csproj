@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36C00D50-0840-4EC6-B2A7-18F945984964}</ProjectGuid>
+    <ProjectGuid>{CDA3D739-92BE-499D-8B01-C0C241CE1E2D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Semaine2</RootNamespace>
-    <AssemblyName>Semaine2</AssemblyName>
+    <RootNamespace>Semaine3_Live</RootNamespace>
+    <AssemblyName>Semaine3_Live</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Etudiant.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

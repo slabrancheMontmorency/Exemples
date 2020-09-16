@@ -19,7 +19,8 @@ namespace Semaine2
 
         private void buttonFermer_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+           // this.Close();
         }
 
         private void FormSemaine2_Load(object sender, EventArgs e)
@@ -50,13 +51,27 @@ namespace Semaine2
 
         private void textBoxUsager_TextChanged(object sender, EventArgs e)
         {
-            if(textBoxUsager.Text == "")
+
+            if (textBoxUsager.Text == "" )
             {
                 buttonAfficher.Enabled = false;
             }
             else
             {
                 buttonAfficher.Enabled = true;
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult resultat = MessageBox.Show("Voulez-vous vraiment quitter? ", 
+                                                    "Quitter", 
+                                                    MessageBoxButtons.OKCancel, 
+                                                    MessageBoxIcon.Warning);
+
+            if(resultat == DialogResult.Cancel)
+            {
+                e.Cancel = true;
             }
         }
     }

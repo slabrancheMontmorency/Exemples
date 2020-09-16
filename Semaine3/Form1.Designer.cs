@@ -35,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioBoutonRouge = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.defaut = new System.Windows.Forms.RadioButton();
@@ -46,6 +46,7 @@
             this.non = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listeNoix = new System.Windows.Forms.CheckedListBox();
+            this.buttonChoix = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,17 +111,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // radioButton1
+            // radioBoutonRouge
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(566, 121);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 21);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Rouge";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioBoutonRouge.AutoSize = true;
+            this.radioBoutonRouge.Location = new System.Drawing.Point(566, 121);
+            this.radioBoutonRouge.Name = "radioBoutonRouge";
+            this.radioBoutonRouge.Size = new System.Drawing.Size(71, 21);
+            this.radioBoutonRouge.TabIndex = 7;
+            this.radioBoutonRouge.TabStop = true;
+            this.radioBoutonRouge.Text = "Rouge";
+            this.radioBoutonRouge.UseVisualStyleBackColor = true;
+            this.radioBoutonRouge.CheckedChanged += new System.EventHandler(this.radioButtonRouge_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -132,6 +133,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Vert";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -143,6 +145,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Bleu";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // defaut
             // 
@@ -176,6 +179,7 @@
             this.checkBox2.TabIndex = 12;
             this.checkBox2.Text = "checkBox2";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -197,6 +201,7 @@
             this.oui.TabStop = true;
             this.oui.Text = "oui";
             this.oui.UseVisualStyleBackColor = true;
+            this.oui.CheckedChanged += new System.EventHandler(this.oui_CheckedChanged);
             // 
             // non
             // 
@@ -213,16 +218,16 @@
             // 
             this.groupBox1.Controls.Add(this.non);
             this.groupBox1.Controls.Add(this.oui);
-            this.groupBox1.Location = new System.Drawing.Point(429, 309);
+            this.groupBox1.Location = new System.Drawing.Point(429, 295);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(288, 53);
+            this.groupBox1.Size = new System.Drawing.Size(288, 49);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Choix";
             // 
             // listeNoix
             // 
-            this.listeNoix.FormattingEnabled = true;
+            this.listeNoix.CheckOnClick = true;
             this.listeNoix.Items.AddRange(new object[] {
             "Arachides",
             "Noisettes",
@@ -233,9 +238,20 @@
             this.listeNoix.TabIndex = 17;
             this.listeNoix.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
+            // buttonChoix
+            // 
+            this.buttonChoix.Location = new System.Drawing.Point(429, 366);
+            this.buttonChoix.Name = "buttonChoix";
+            this.buttonChoix.Size = new System.Drawing.Size(288, 61);
+            this.buttonChoix.TabIndex = 18;
+            this.buttonChoix.Text = "Vérifier Choix";
+            this.buttonChoix.UseVisualStyleBackColor = true;
+            this.buttonChoix.Click += new System.EventHandler(this.buttonChoix_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1039, 430);
+            this.Controls.Add(this.buttonChoix);
             this.Controls.Add(this.listeNoix);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkBox3);
@@ -244,7 +260,7 @@
             this.Controls.Add(this.defaut);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioBoutonRouge);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
@@ -253,6 +269,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -271,7 +288,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioBoutonRouge;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton defaut;
@@ -282,6 +299,7 @@
         private System.Windows.Forms.RadioButton non;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckedListBox listeNoix;
+        private System.Windows.Forms.Button buttonChoix;
     }
 }
 
